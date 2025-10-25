@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: aqua;
+        }
+
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid black;
+            box-sizing: border-box ;
+            /* Agar humne box-sizing:border box lagaaya to ye padding or border ko width or height me include kar lega.
+            Aur agar humne nahi lagaya to ye padding or border ko width or height me include nahi karega sirf content ko consider karega. */
+        }
+
+        .box2{
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            box-sizing: border-box ;
+
+            /* Yaha par dono element ki margin collapse kar rahi hai. Margin collapse ka matlab hai ki jab do vertical margins milte hain to unka bada margin hi consider kiya jata hai.
+            Is case me dono box ke upar aur neeche 25px margin hai to dono ka bada margin 25px hi consider kiya jayega. Aur agar in dono me se ek ka margin 30px hota to 30px hi consider kiya jata. */
+        }
+    </style>
+</head>
+<body>
+   <div class="box box1">I am a box</div> 
+   <div class="box box2">I am another box</div>
+</body>
+</html>
