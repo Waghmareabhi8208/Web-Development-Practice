@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .Box{
+            border: blue 2px solid;
+            display: inline-block;
+            padding: 15px;
+            margin : 25px;
+            width: 100px;
+        }
+        .Box1{
+            /* display: none; */
+            /* visibility: hidden; */
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="Box Box1">
+        I am a box
+    </div>
+    <div class="Box">
+        I am good box
+    </div>
+    <span>I am a good</span>
+    <span>boy</span>
+</body>
+</html>
